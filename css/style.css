@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* overflow-x: hidden; */
+    /* font-size: 10px; */
+}
+
+#home{
+    min-height: 100vh;
+}
+
+#home .header{
+    background-color: whitesmoke;
+    max-width: 100%;
+    height: max(8vw, 8vh);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 0 3vw;
+}
+
+#home .header .logo1{
+    flex-grow: 2;
+}
+
+#home .header .logo1 img{
+    width: 6vw;
+}
+
+#home .header .heading{
+    flex-grow: 1;
+    font-family: 'Oswald', Arial Narrow, sans-serif; /* Tall and modern font */
+    font-size: 3vw; /* Responsive font size for all screens */
+    letter-spacing: 0.1em; /* Balanced letter spacing */
+    text-transform: uppercase; 
+    color: #2c3e50; /* Dark, classy text color for contrast */
+}
+
+/* Menu icon */
+#home .header .menu-icon {
+    display: none;
+    margin: 0 0 0 10px;
+    font-size: larger;
+    cursor: pointer;
+    color: black;
+    border: none;
+}
+
+#home .nav-bar .navigation .nav-logo img{
+    height: 8vh;
+}
+
+#home .nav-bar .navigation{
+    height: max(5vw, 5vh);
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+    background-color: black;       
+}
+
+#home .nav-bar .navigation li{
+    list-style-type: none;
+}
+
+#home .nav-bar .navigation .nav-link a{
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    font-size: 3vh;
+    padding: 10px 20px; /* Adjust padding for better spacing */
+    border-radius: 5px; /* Add some curvature to the nav items */
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+#home .nav-bar .navigation .nav-link:hover{
+    transform: scale(1.05);
+}
+
+#home .nav-bar .navigation .nav-link a:hover{
+    background-color: white; /* Background changes to white on hover */
+    color: black; /* Text color changes to black on hover */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+#home .nav-bar .navigation .signin-login a:hover{
+    cursor: pointer;
+    background-color: transparent;
+}
+
+#home .nav-bar .navigation .signin-login button{
+    padding: 1vh 1vw;
+    border-radius: 5px;
+    font-size: 2.5vh;
+}
+
+#home .nav-bar .navigation .signin-login button a{
+    color: black;
+    font-size: 2.5vh;
+}
+
+#home .nav-bar .navigation .active a{
+    background-color: white; /* Active link background color white */
+    color: black; /* Active link text color black */
+    border-radius: 5px; /* Keep curvature consistent */
+}
+
+
+@media (max-width: 767.98px) {
+    #home .header .menu-icon {
+        display: flex;
+        color: #000;
+        font-size: 4vh;
+    }
+
+     #home .nav-bar .navigation{
+        /* display: none; */
+        position: absolute;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        width: 60%;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)); /* Subtle gradient */
+        backdrop-filter: blur(15px); /* Blurs content behind the element */
+        /* line-height: 10vh; */
+    }
+
+    #home .nav-bar .navigation .nav-link{
+        margin: 1vh 0;
+    }
+
+    #home .nav-bar .navigation .nav-link a{
+        color: black;
+    }
+
+    #home .nav-bar .navigation .active a{
+        background-color: transparent;
+    }
+
+}
+
+
+/* Responsive Media Queries */
+
+@media (max-width: 320px) {
+    
+    #home .header{
+        height: max(8vw, 8vh);
+    }
+    
+/* Extra Small Devices (Phones, 320px - 575px) */
+@media (min-width: 321px) and (max-width: 575.98px) {
+    #home .header {
+        height: max(4vw, 4vh);
+    }
+    
+}
+
+/* Small Devices (Landscape Phones, 576px - 767px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    #home .header{
+        height: max(6vw, 6vh);
+    }
+    
+}
+
+/* Medium Devices (Tablets, 768px - 991px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    #home .header{
+        height: max(6vw, 6vh);
+    }
+    
+}
+
+/* Large Devices (Small Desktops, 992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    #home .header{
+        height: max(8vw, 8vh);
+    }
+    
+}
+
+/* Extra Large Devices (Laptops, 1200px - 1599px) */
+@media (min-width: 1200px) and (max-width: 1599.98px) {
+    #home .header{
+        height: max(8vw, 8vh);
+    }
+    
+}
+
+/* Ultra Large Devices (1920px - Full HD Screens) */
+@media (min-width: 1600px) and (max-width: 1920px) {
+    #home .header{
+        height: max(10vh, 10vh);
+    }
+
+}
+}
